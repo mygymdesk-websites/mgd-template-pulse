@@ -66,8 +66,8 @@ const Pricing = () => {
           subtitle="No hidden fees, just results. Choose the plan that fits your goals"
         />
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+        {/* Pricing Cards - stack on mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
           {pricingPlans.map((plan, index) => (
             <PricingCard
               key={plan.id}
@@ -79,16 +79,16 @@ const Pricing = () => {
 
         {/* Money-back guarantee */}
         <motion.div
-          className="flex items-center justify-center gap-3 text-center"
+          className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="w-10 h-10 bg-pulse-blue/10 rounded-full flex items-center justify-center">
-            <Shield className="w-5 h-5 text-pulse-blue" />
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-pulse-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+            <Shield className="w-4 h-4 md:w-5 md:h-5 text-pulse-blue" />
           </div>
-          <p className="text-muted-foreground">
+          <p className="text-sm md:text-base text-muted-foreground">
             <span className="font-semibold text-pulse-slate">7-day money-back guarantee.</span>{" "}
             Not satisfied? Get a full refund, no questions asked.
           </p>

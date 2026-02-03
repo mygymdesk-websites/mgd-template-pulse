@@ -214,22 +214,22 @@ const Contact = () => {
           {/* Contact Info & Map */}
           <ScrollReveal direction="right">
             <div className="space-y-8">
-              {/* Contact Info Cards */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* Contact Info Cards - stack on mobile */}
+              <div className="grid grid-cols-2 gap-3 md:gap-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
-                    className="bg-pulse-light rounded-xl p-5 hover:shadow-card transition-all group"
+                    className="bg-pulse-light rounded-xl p-4 md:p-5 hover:shadow-card transition-all group"
                     whileHover={{ y: -3 }}
                   >
-                    <div className="w-10 h-10 bg-gradient-pulse rounded-lg flex items-center justify-center mb-3 group-hover:shadow-glow-gradient transition-shadow">
-                      <info.icon className="w-5 h-5 text-white" />
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-pulse rounded-lg flex items-center justify-center mb-2 md:mb-3 group-hover:shadow-glow-gradient transition-shadow">
+                      <info.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
                     </div>
-                    <h4 className="font-display font-bold text-pulse-slate mb-2">
+                    <h4 className="font-display font-bold text-pulse-slate text-sm md:text-base mb-1 md:mb-2">
                       {info.title}
                     </h4>
                     {info.details.map((detail, i) => (
-                      <p key={i} className="text-sm text-muted-foreground">
+                      <p key={i} className="text-xs md:text-sm text-muted-foreground">
                         {detail}
                       </p>
                     ))}
@@ -238,7 +238,7 @@ const Contact = () => {
               </div>
 
               {/* Map */}
-              <div className="rounded-2xl overflow-hidden h-64 bg-pulse-light">
+              <div className="rounded-xl md:rounded-2xl overflow-hidden h-[200px] md:h-64 bg-pulse-light">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
                   width="100%"
