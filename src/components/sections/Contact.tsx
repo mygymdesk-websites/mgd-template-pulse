@@ -159,12 +159,14 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-pulse-slate mb-2">
+                    <label htmlFor="interest" className="block text-sm font-medium text-pulse-slate mb-2">
                       I'm Interested In
                     </label>
                     <select
+                      id="interest"
                       name="interest"
                       required
+                      aria-label="Select your interest"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-white focus:outline-none focus:ring-2 focus:ring-pulse-blue/20 focus:border-pulse-blue focus:shadow-glow-blue/20 transition-all"
                       value={formData.interest}
                       onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
