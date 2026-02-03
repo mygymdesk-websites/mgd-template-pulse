@@ -141,18 +141,18 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
           <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-4 text-center md:text-left">
-            <p className="text-white/40 text-xs md:text-sm order-2 md:order-1">
+            <p className="text-white/60 text-xs md:text-sm order-2 md:order-1">
               © 2024 Pulse Fitness. All rights reserved.
             </p>
             <div className="flex gap-4 md:gap-6 order-1 md:order-2">
-              <a href="#" className="text-white/40 hover:text-white text-xs md:text-sm transition-colors">
+              <a href="#" className="text-white/60 hover:text-white text-xs md:text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-white/40 hover:text-white text-xs md:text-sm transition-colors">
+              <a href="#" className="text-white/60 hover:text-white text-xs md:text-sm transition-colors">
                 Terms of Service
               </a>
             </div>
-            <p className="text-white/40 text-xs md:text-sm order-3">
+            <p className="text-white/60 text-xs md:text-sm order-3">
               Powered by <GradientText>MyGymDesk</GradientText>
             </p>
           </div>
