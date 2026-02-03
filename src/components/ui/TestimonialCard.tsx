@@ -46,7 +46,7 @@ const TestimonialCard = ({ quote, name, image, duration, rating }: TestimonialCa
           className="w-12 h-12 rounded-full object-cover ring-2 ring-pulse-blue/20"
         />
         <div>
-          <h4 className="font-display font-bold text-pulse-slate">{name}</h4>
+          <h3 className="font-display font-bold text-pulse-slate">{name}</h3>
           <p className="text-sm text-muted-foreground">Member for {duration}</p>
         </div>
       </div>

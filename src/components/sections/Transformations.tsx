@@ -81,9 +81,9 @@ const Transformations = () => {
                   loading="lazy"
                 />
                 <div>
-                  <h4 className="font-display font-bold text-pulse-slate text-lg md:text-xl">
+                  <h3 className="font-display font-bold text-pulse-slate text-lg md:text-xl">
                     Priya Sharma
-                  </h4>
+                  </h3>
                   <p className="text-sm md:text-base text-muted-foreground">Lost 15kg in 6 months</p>
                 </div>
               </div>

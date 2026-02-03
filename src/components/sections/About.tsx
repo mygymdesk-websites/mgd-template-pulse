@@ -84,9 +84,9 @@ const About = () => {
                       <value.icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-display font-bold text-pulse-slate text-sm md:text-base mb-1">
+                      <h3 className="font-display font-bold text-pulse-slate text-sm md:text-base mb-1">
                         {value.title}
-                      </h4>
+                      </h3>
                       <p className="text-xs md:text-sm text-muted-foreground">
                         {value.description}
                       </p>
