@@ -7,7 +7,7 @@ const trainers = [
     name: "Vikram Singh",
     role: "Head Trainer & HIIT Specialist",
     tagline: "No excuses, only results!",
-    image: "https://images.unsplash.com/photo-1567013127542-490d757e6349?w=500&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=500&auto=format&fit=crop",
     instagram: "#",
   },
   {
