@@ -110,12 +110,15 @@ const Schedule = () => {
                     <p className="text-sm text-muted-foreground">with {item.trainer}</p>
                   </div>
                 </div>
-                <motion.button
+                <motion.a
+                  href={`https://wa.me/919876543210?text=${encodeURIComponent(`Hi! I'd like to book ${item.class} on ${selectedDay} at ${item.time}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 text-sm font-medium text-pulse-blue hover:bg-pulse-blue/10 rounded-lg transition-colors"
                   whileHover={{ scale: 1.05 }}
                 >
                   Book
-                </motion.button>
+                </motion.a>
               </motion.div>
             ))}
           </div>
