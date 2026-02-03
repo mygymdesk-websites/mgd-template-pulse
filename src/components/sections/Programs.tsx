@@ -26,7 +26,7 @@ const programs = [
     description: "Build lean muscle and get toned with weights and bodyweight exercises",
     duration: "50 min",
     intensity: "Medium-High",
-    image: "https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=600&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop",
   },
   {
     id: 4,
