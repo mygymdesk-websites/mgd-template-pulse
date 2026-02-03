@@ -64,8 +64,8 @@ const Programs = () => {
           subtitle="From high-intensity training to dance fitness, we've got something for everyone"
         />
 
-        {/* Programs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {/* Programs Grid - single column on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {programs.map((program, index) => (
             <ProgramCard
               key={program.id}
@@ -75,9 +75,9 @@ const Programs = () => {
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA - full width on mobile */}
         <div className="text-center">
-          <GradientButton size="lg" href="#contact">
+          <GradientButton size="lg" href="#contact" className="w-full sm:w-auto">
             Explore All Programs
             <ArrowRight className="w-5 h-5" />
           </GradientButton>

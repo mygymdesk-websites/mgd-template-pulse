@@ -28,10 +28,10 @@ const features = [
 const Features = () => {
   return (
     <section className="section-padding bg-pulse-dark relative overflow-hidden">
-      {/* Background decorations */}
+      {/* Background decorations - reduced on mobile */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-pulse-blue rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pulse-magenta rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-48 md:w-96 h-48 md:h-96 bg-pulse-blue rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-48 md:w-96 h-48 md:h-96 bg-pulse-magenta rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -42,7 +42,8 @@ const Features = () => {
           light
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Grid - 1 col mobile, 2 col tablet, 4 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}

@@ -95,15 +95,16 @@ const Testimonials = () => {
             </motion.button>
           </div>
 
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-4">
+          {/* Dots - larger touch targets */}
+          <div className="flex justify-center gap-3 mt-4">
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === current ? "bg-gradient-pulse w-6" : "bg-pulse-slate/20"
+                className={`h-3 rounded-full transition-all min-w-[44px] ${
+                  index === current ? "bg-gradient-pulse w-8" : "bg-pulse-slate/20 w-3"
                 }`}
                 onClick={() => setCurrent(index)}
+                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>

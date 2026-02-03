@@ -46,7 +46,8 @@ const Trainers = () => {
           subtitle="Passionate experts dedicated to your success"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Grid - 1 col mobile, 2 col tablet, 4 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {trainers.map((trainer, index) => (
             <TrainerCard
               key={trainer.id}
