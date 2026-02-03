@@ -22,10 +22,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", color: "hover:text-pink-500" },
-    { icon: Facebook, href: "#", color: "hover:text-blue-500" },
-    { icon: Twitter, href: "#", color: "hover:text-sky-500" },
-    { icon: Youtube, href: "#", color: "hover:text-red-500" },
+    { icon: Instagram, href: "#", color: "hover:text-pink-500", label: "Follow us on Instagram" },
+    { icon: Facebook, href: "#", color: "hover:text-blue-500", label: "Follow us on Facebook" },
+    { icon: Twitter, href: "#", color: "hover:text-sky-500", label: "Follow us on Twitter" },
+    { icon: Youtube, href: "#", color: "hover:text-red-500", label: "Subscribe on YouTube" },
   ];
 
   return (
@@ -52,9 +52,10 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 md:gap-4 justify-center sm:justify-start">
               {socialLinks.map((social, index) => (
-                <motion.a
+              <motion.a
                   key={index}
                   href={social.href}
+                  aria-label={social.label}
                   className={`w-10 h-10 md:w-10 md:h-10 bg-white/10 rounded-lg flex items-center justify-center text-white/60 transition-colors min-w-[44px] min-h-[44px] ${social.color}`}
                   whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}

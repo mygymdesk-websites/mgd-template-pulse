@@ -36,6 +36,7 @@ const TrainerCard = ({ name, role, tagline, image, instagram, delay = 0 }: Train
           {instagram && (
             <motion.a
               href={instagram}
+              aria-label={`Follow ${name} on Instagram`}
               className="absolute top-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
