@@ -118,6 +118,7 @@ const Hero = () => {
                   alt="Fitness training"
                   className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
                   loading="eager"
+                  fetchPriority="high"
                 />
                 
                 {/* Gradient overlay */}
