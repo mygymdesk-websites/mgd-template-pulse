@@ -80,6 +80,7 @@ const PricingCard = ({ name, price, period, description, features, popular = fal
         <GradientButton
           variant={popular ? "filled" : "outline"}
           className="w-full"
+          href={`https://wa.me/919876543210?text=${encodeURIComponent(`Hi! I'm interested in the ${name} plan (₹${price.toLocaleString()}/${period}). Can you help me get started?`)}`}
         >
           Get Started
         </GradientButton>

@@ -59,6 +59,15 @@ const Navbar = () => {
                 <motion.a
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector(link.href);
+                    if (element) {
+                      const offset = 80;
+                      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                      window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+                    }
+                  }}
                   className={`font-display font-medium text-sm transition-colors ${
                     isScrolled ? "text-pulse-slate hover:text-pulse-blue" : "text-pulse-slate hover:text-pulse-blue"
                   }`}
@@ -71,7 +80,17 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <GradientButton size="sm" href="#contact">
+              <GradientButton 
+                size="sm" 
+                onClick={() => {
+                  const element = document.querySelector("#pricing");
+                  if (element) {
+                    const offset = 80;
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+                  }
+                }}
+              >
                 Get Started
               </GradientButton>
             </div>
@@ -124,7 +143,18 @@ const Navbar = () => {
                     key={link.name}
                     href={link.href}
                     className="block font-display font-semibold text-lg text-pulse-slate hover:text-pulse-blue transition-colors"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsMobileMenuOpen(false);
+                      setTimeout(() => {
+                        const element = document.querySelector(link.href);
+                        if (element) {
+                          const offset = 80;
+                          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                          window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+                        }
+                      }, 300);
+                    }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
@@ -133,7 +163,20 @@ const Navbar = () => {
                   </motion.a>
                 ))}
                 <div className="pt-4">
-                  <GradientButton className="w-full" href="#contact">
+                  <GradientButton 
+                    className="w-full" 
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setTimeout(() => {
+                        const element = document.querySelector("#pricing");
+                        if (element) {
+                          const offset = 80;
+                          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                          window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+                        }
+                      }, 300);
+                    }}
+                  >
                     Get Started
                   </GradientButton>
                 </div>
