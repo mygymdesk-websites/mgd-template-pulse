@@ -82,6 +82,7 @@ const Testimonials = () => {
               onClick={prev}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6 text-pulse-slate" />
             </motion.button>
@@ -90,6 +91,7 @@ const Testimonials = () => {
               onClick={next}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </motion.button>
